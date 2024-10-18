@@ -1,13 +1,13 @@
 # Stage 1: Building the Svelte Node app
 
 # Start from the official Node.js 20 image based on Alpine Linux
-FROM node:20-alpine AS builder
+FROM node:22-alpine3.19 AS builder
 
 # Set the working directory to /app
 WORKDIR /app
 
 # Copy package.json and package-lock.json files to the working directory
-COPY package*.json gsap-bonus.tgz ./
+COPY package*.json ./
 
 # Install production dependencies
 RUN npm ci --omit=dev
@@ -24,10 +24,7 @@ RUN npm prune --omit=dev
 # Stage 2: Running the Svelte Node app with non-root user
 
 # Start from the official Node.js 20 image based on Alpine Linux
-FROM node:20-alpine
-
-# Create a new group and user named "app"
-RUN addgroup -S app && adduser -S app -G app
+FROM node:22-alpine3.19 AS production
 
 # Set the working directory to /app
 WORKDIR /app
@@ -39,14 +36,8 @@ COPY --from=builder /app/node_modules node_modules/
 # Copy package.json and package-lock.json files to the working directory
 COPY package*.json ./
 
-# Change ownership of the /app directory to the "app" user
-RUN chown -R app:app /app
-
-# Switch to the "app" user
-USER app
-
-# Expose port 4000 for the Svelte Node app
-EXPOSE 4000
+# Expose port 3000 for the Svelte Node app
+EXPOSE 3000
 
 # Run the Svelte Node app with strict mode and no lazy loading
 CMD [ "node", "--no-lazy", "--use-strict", "build" ]
