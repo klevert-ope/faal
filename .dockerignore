@@ -1,0 +1,5 @@
+.idea
+docker-compose.yml
+.prettierrc
+.prettierignore
+README.md

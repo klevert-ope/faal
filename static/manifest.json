@@ -1,0 +1,42 @@
+{
+  "name": "FAA",
+  "short_name": "FAA",
+  "description": "Fleet Associates Africa ltd a leading African organization started in the year 2015 in Kenya by a group of experts specializing in fleet management.It is the only organization in the region with the capability of providing fleet services end to end under one roof. It does this through provision of consultancy,training,research and undertaking various fleet practical projects.\n\t\tOur main objective is to fill  the management gaps existing in the fleet industry, sectors, and individual organizations with a view to reduce risks related to fleet investments, improving efficiency, safety, productivity and reducing overall transportation and staff costs and thus improving the bottom line.",
+  "display": "standalone",
+  "start_url": "/",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    }
+  ],
+  "serviceworker": {
+    "src": "/service-worker.js",
+    "scope": "/"
+  },
+  "theme_color": "#3E4784",
+  "background_color": "#fcfcfc",
+  "version": "2.0.0"
+}
