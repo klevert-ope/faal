@@ -53,7 +53,7 @@
 			{#each links as { path, label }, index}
 				<li class="{$activeLink === path ? 'active-link' : ''} slide-up"
 						style="opacity: 0; animation-delay: {350 + index * 100}ms">
-					<a href={path} on:click={() => handleNavigation(path)}>{label}</a>
+					<a href={path} on:click={() => handleNavigation(path)} data-sveltekit-preload-data="hover">{label}</a>
 				</li>
 			{/each}
 		</ul>

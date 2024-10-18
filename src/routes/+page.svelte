@@ -51,6 +51,8 @@
 		<div class="fleet-img">
 			<img
 				alt="Fleet Management Approach"
+				fetchpriority="high"
+				loading="eager"
 				src="https://res.cloudinary.com/dy9jpurpz/image/upload/v1717156088/oselzxpuntxwquc21mzj.png"
 			/>
 		</div>
@@ -156,7 +158,7 @@
 		}
 
 	img {
-		width: 100%;
+		width: 600px;
 		max-width: 100%;
 		height: auto;
 		border-radius: 5px;

@@ -25,7 +25,8 @@
 		<ul class="flex-row-between bg-blur">
 			{#each links as { path, label } (path)}
 				<li class="{$activeLink === path ? 'active-link' : ''} font-xs">
-					<a on:click={() => handleNavigation(path)} href={path}>{label}</a>
+					<a on:click={() => handleNavigation(path)} href={path}
+						 data-sveltekit-preload-data="hover">{label}</a>
 				</li>
 			{/each}
 		</ul>

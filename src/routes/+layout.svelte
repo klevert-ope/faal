@@ -1,6 +1,8 @@
 <svelte:head>
-	<link href="https://fonts.cdnfonts.com/css/pp-neue-montreal" rel="stylesheet">
-	<link href="https://fonts.cdnfonts.com/css/square-grotesk" rel="stylesheet">
+	<link data-sveltekit-preload-data="eager"
+				href="https://fonts.cdnfonts.com/css/pp-neue-montreal" rel="stylesheet">
+	<link data-sveltekit-preload-data="eager"
+				href="https://fonts.cdnfonts.com/css/square-grotesk" rel="stylesheet">
 </svelte:head>
 
 <script lang="ts">
@@ -8,7 +10,6 @@
 	import Navlg from '$lib/NavLg.svelte';
 	import NavSm from '$lib/NavSm.svelte';
 	import Footer from '$lib/FooterContact.svelte';
-
 
 	interface Navigation {
 		complete: Promise<void>;
