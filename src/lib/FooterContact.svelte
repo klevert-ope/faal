@@ -15,7 +15,7 @@
 		</h5>
 		<div class="font-medium font-md text-white">
 			<p>Queens Park Court Off Eastern Bypass, Embakasi</p>
-			<p>P.O Box 40722-00100</p>
+			<p>P.O. Box 772-00521</p>
 			<p>Nairobi, Kenya</p>
 		</div>
 		<div class="flex-center">
